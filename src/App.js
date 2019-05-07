@@ -27,7 +27,7 @@ class App extends Component {
   calcTotal() {
     let { cost, quantity, taxRate } = this.state;
     let subTotal = cost * quantity;
-    let tax = subTotal * taxRate;
+    let tax = subTotal * (taxRate / 100);
     this.setState({
       total: tax + subTotal
     })
